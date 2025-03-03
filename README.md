@@ -1,75 +1,62 @@
-🚀 XOrithm Server Status Dashboard
-A Next.js application for monitoring server statuses, allowing users to filter and sort them dynamically.
+# 🚀 XOrithm Server Status Dashboard
 
-📌 Features
-✅ Authentication (NextAuth.js with Google, Facebook, and Credentials)
-✅ Server Status Dashboard (Displays servers with color-coded status)
-✅ Filtering & Sorting (By status and response time)
-✅ Detailed Server View (Name, IP, response time, uptime)
-✅ Mock API (Static server data for demonstration)
-✅ Tailwind CSS for responsive UI
-✅ Optimized for Deployment on Vercel
-📂 Project Structure
-bash
-Copy
-Edit
+A Next.js application for monitoring server statuses, featuring authentication, filtering, and sorting.
+
+## 📌 Features
+- **User Authentication** (NextAuth.js: Google, Facebook, Credentials)
+- **Server Status Monitoring** (Mock API with real-time status updates)
+- **Filtering & Sorting** (By status, name, response time)
+- **Detailed Server View** (Name, IP, response time, uptime)
+- **Tailwind CSS** for a modern UI
+- Optimized for Deployment on **Vercel**
+
+## 📂 Project Structure
+```
 /xorithm-assignment
 │── /app
-│   ├── /api (API routes for authentication and mock servers)
-│   ├── /components (Reusable UI components)
-│   ├── /dashboard (Main dashboard page)
-│── /lib (Utilities and helper functions)
-│── /public (Static assets)
-│── /styles (Global styles)
-│── next.config.js (Next.js configuration)
-│── tailwind.config.js (Tailwind setup)
-│── package.json (Project dependencies)
-│── README.md (Project documentation)
-🛠️ Installation & Running Locally
-1️⃣ Clone the Repository
-sh
-Copy
-Edit
-git clone https://github.com/hassanRushdi/xorithm-assignment.git
-cd xorithm-assignment
-2️⃣ Install Dependencies
-sh
-Copy
-Edit
-npm install
-3️⃣ Set Up Environment Variables
-Create a .env.local file in the root directory and add the following:
+│   ├── /api            # API routes (authentication, mock servers)
+│   ├── /components     # Reusable UI components
+│   ├── /dashboard      # Main dashboard page
+│── /lib                # Utilities and helper functions
+│── /public             # Static assets
+│── /styles             # Global styles
+│── next.config.js      # Next.js configuration
+│── tailwind.config.js  # Tailwind setup
+│── package.json        # Project dependencies
+│── README.md           # Project documentation
+```
 
-sh
-Copy
-Edit
-NEXTAUTH_SECRET=your_secret_key
-NEXTAUTH_URL=http://localhost:3000
+## 🛠️ Installation & Setup
+1. **Clone the Repository**
+    ```sh
+    git clone https://github.com/hassanRushdi/xorithm-assignment.git
+    cd xorithm-assignment
+    ```
+2. **Install Dependencies**
+    ```sh
+    npm install
+    ```
 
-# OAuth Credentials
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+3. **Run the Development Server**
+    ```sh
+    npm run dev
+    ```
+    Local URL: [http://localhost:3000](http://localhost:3000)
 
-FACEBOOK_CLIENT_ID=your_facebook_client_id
-FACEBOOK_CLIENT_SECRET=your_facebook_client_secret
-4️⃣ Run the Development Server
-sh
-Copy
-Edit
-npm run dev
-Localhost URL: http://localhost:3000
+## 📝 Implementation & Design Choices
+### 🔹 Authentication
+- Implemented with NextAuth.js for email/password and social logins.
+- Uses OAuth for Google and Facebook authentication.
+- Secure session handling with JWT.
 
-📝 Implementation & Design Choices
-🔹 Authentication
-Implemented with NextAuth.js for email/password and social logins.
-Uses OAuth for Google and Facebook authentication.
-Secure authentication flow with session handling.
-🔹 Data Handling
-Mock API simulates fetching real-time server data.
-React Query optimizes fetching, caching, and updating server data.
-🔹 UI & Styling
-Tailwind CSS ensures a clean and responsive design.
-Interactive UI with hover effects and status color indicators.
-🔹 Filtering & Sorting
-Dropdown for filtering servers by status (Up, Down, Degraded).
-Sorting options for name and response time.
+### 🔹 Data Handling
+- Mock API simulates fetching real-time server data.
+- React Query optimizes fetching, caching, and updating server data.
+
+### 🔹 UI & Styling
+- Tailwind CSS for a responsive and modern design.
+- Interactive UI with hover effects and color-coded status badges.
+
+### 🔹 Filtering & Sorting
+- Dropdown filtering (Up, Down, Degraded).
+- Sorting by name or response time.
